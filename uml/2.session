@@ -1,0 +1,15 @@
+window_sizes 1920 1001 450 1464 819 128
+
+diagrams
+  deploymentdiagram_ref 128002 // dd
+    1464 819 100 A4 72 0
+  active  classdiagram_ref 134530 // dcMaps
+    1464 819 100 A4 0 0
+end
+show_stereotypes
+selected classdiagram_ref 134530 // dcMaps
+open
+  deploymentview_ref 128002 // DiagrammeDeDéploiement
+  usecaseview_ref 128002 // GaikaEngine
+end
+end

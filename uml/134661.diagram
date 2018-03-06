@@ -1,0 +1,72 @@
+format 216
+
+classcanvas 128005 class_ref 134533 // ControlStates
+  classdiagramsettings member_max_width 0 end
+  xyz 29 31 2000
+end
+classcanvas 128133 class_ref 134661 // BluetoothBoundary
+  classdiagramsettings member_max_width 0 end
+  xyz 100 419 2000
+end
+classcanvas 128261 class_ref 134789 // TcpBoundary
+  classdiagramsettings member_max_width 0 end
+  xyz 516 288 2000
+end
+classcanvas 128389 class_ref 134917 // RangerControlRobot
+  classdiagramsettings member_max_width 0 end
+  xyz 155 518 2000
+end
+classcanvas 128645 class_ref 135045 // Camera
+  classdiagramsettings member_max_width 0 end
+  xyz 504 396 2000
+end
+classcanvas 128901 class_ref 135173 // LeapMotion
+  classdiagramsettings member_max_width 0 end
+  xyz 616 664 2005
+end
+classcanvas 129029 class_ref 135301 // RangerControlUser
+  classdiagramsettings member_max_width 0 end
+  xyz 297 663 2000
+end
+classcanvas 129541 class_ref 135429 // Screen
+  classdiagramsettings member_max_width 0 end
+  xyz 623 550 2000
+end
+note 130053 "paketge"
+  color magenta  xyzwh 564 624 2000 231 181
+relationcanvas 128517 relation_ref 134533 // <generalisation>
+  from ref 128389 z 2001 to ref 128133
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128773 relation_ref 134661 // <generalisation>
+  from ref 128645 z 2001 to ref 128261
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129157 relation_ref 134789 // <directional composition>
+  from ref 129029 z 2001 to ref 128389
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129285 relation_ref 134917 // <directional composition>
+  from ref 129029 z 2001 to ref 128645
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129413 relation_ref 135045 // <directional composition>
+  from ref 129029 z 2001 to ref 128901
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129669 relation_ref 135173 // <directional composition>
+  from ref 129029 z 2001 to ref 129541
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129797 relation_ref 135301 // <association>
+  from ref 129541 z 2001 to ref 128901
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

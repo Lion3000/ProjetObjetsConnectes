@@ -1,0 +1,75 @@
+format 216
+
+deploymentnodecanvas 128005 deploymentnode_ref 134533 // Robot
+  name "Mbot Ranger + Bras"
+  xyzwh 201 218.2 2000 209 187
+end
+deploymentnodecanvas 128133 deploymentnode_ref 134661 // Ordinateur
+  xyzwh 611.6 242.8 2000 185 215
+end
+deploymentnodecanvas 128261 deploymentnode_ref 134789 // Camera
+  name "SC-5178"
+  xyzwh 200.1 156.7 2000 211 48
+end
+deploymentnodecanvas 128517 deploymentnode_ref 134917 // Routeur
+  name "WifiSpot"
+  xyzwh 613.6 160.6 2000 181 47
+end
+deploymentnodecanvas 129029 deploymentnode_ref 135045 // LEAP Motion
+  xyzwh 652.2 500.2 2000 99 33
+end
+componentcanvas 129413 component_ref 134533 // Windows
+  
+  xyzwh 619.4 275.6 2005 167 57
+end
+deploymentnodecanvas 129797 deploymentnode_ref 135173 // Moteur
+  name "ChenilleGauche"
+  xyzwh 93.8 452.9 2000 153 33
+end
+deploymentnodecanvas 129925 deploymentnode_ref 135173 // Moteur
+  name "ChenilleDroit"
+  xyzwh 295.2 450.6 2000 135 33
+end
+deploymentnodecanvas 130053 deploymentnode_ref 135173 // Moteur
+  name "Bras"
+  xyzwh 23.8 359.8 2000 89 33
+end
+deploymentnodecanvas 130437 deploymentnode_ref 135173 // Moteur
+  name "Pince"
+  xyzwh 13 219 2000 95 33
+end
+componentcanvas 130821 component_ref 134661 // Arduino
+  
+  xyzwh 213.2 252 2006 167 57
+end
+componentcanvas 130949 component_ref 134789 // RangerControlRobot
+  
+  color lightorange xyzwh 213.2 313 2006 167 57
+end
+componentcanvas 131077 component_ref 134917 // RangerControlUser
+  
+  color lightorange xyzwh 618 394.4 2006 167 57
+end
+componentcanvas 131333 component_ref 135045 // LeapSDK
+  
+  xyzwh 619.4 333.2 2006 167 57
+end
+textcanvas 131461 "Bluetooth LE"
+  xyzwh 478.4 308 2006 73 15
+line 128645 ----
+  from ref 128517 z 2001 stereotype "<<USB>>" xyz 713 218.5 3000 to ref 128133
+line 129157 ----
+  from ref 129029 z 2001 stereotype "<<USB>>" xyz 706.5 469.5 3000 to ref 128133
+line 130181 ----
+  from ref 129797 z 2001 stereotype "<<DoubleFlowPower>>" xyz 134 428.5 3000 to ref 128005
+line 130309 ----
+  from ref 129925 z 2001 stereotype "<<DoubleFlowPower>>" xyz 279.5 426.5 3000 to ref 128005
+line 130565 ----
+  from ref 130437 z 2001 stereotype "<<DoubleFlowPower>>" xyz 53 256.5 3000 to ref 128005
+line 130693 ----
+  from ref 130053 z 2001 stereotype "<<DoubleFlowPower>>" xyz 58 337.5 3000 to ref 128005
+line 129541 -_-_ decenter_end 442
+  from ref 128261 z 2001 to ref 128517
+line 129669 -_-_ decenter_end 372
+  from ref 128005 z 2001 to ref 128133
+end

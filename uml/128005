@@ -1,0 +1,451 @@
+format 216
+"ProjetObjetsConnectes" // ProjetObjetsConnectes
+  revision 2
+  modified_by 5 "Alex"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  componentview 134533 "ComponentView"
+    //component diagram settings
+    componentdiagramsettings
+     end
+    component 134533 "Windows"
+    end
+
+    component 134661 "Arduino"
+    end
+
+    component 134789 "RangerControlRobot"
+    end
+
+    component 134917 "RangerControlUser"
+    end
+
+    component 135045 "LeapSDK"
+    end
+  end
+
+  deploymentview 134533 "DiagrameDeDeploiement"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    deploymentdiagram 134533 "diag"
+      deploymentdiagramsettings
+       end
+      size A4
+    end
+
+    deploymentnode 134533 "Robot"
+    end
+
+    deploymentnode 134661 "Ordinateur"
+    end
+
+    deploymentnode 134789 "Camera"
+    end
+
+    deploymentnode 134917 "Routeur"
+    end
+
+    deploymentnode 135045 "LEAP Motion"
+    end
+
+    deploymentnode 135173 "Moteur"
+    end
+
+  end
+
+  classview 134533 "DiagrameDeClass"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 134661 "diag"
+      classdiagramsettings member_max_width 0 end
+      size A4
+    end
+
+    class 134533 "ControlStates"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 134533 "RIGHT_TRACK_STOP"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 134661 "RIGHT_TRACK_FORWARD"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 134789 "RIGHT_TRACK_BACK"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 134917 "LEFT_TRACK_STOP"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135045 "LEFT_TRACK_FORWARD"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135173 "LEFT_TRACK_BACK"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135301 "ARM_UP"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135429 "ARM_DOWN"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135557 "ARM_STOP"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135685 "GRIPPER_OPEN"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135813 "GRIPPER_CLOSE"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 135941 "GRIPPER_STOP"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 136069 "ALL_STOP"
+	public type class_ref 134533 // ControlStates
+	cpp_decl "  ${name}${value},${comment}"
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 134661 "BluetoothBoundary"
+      visibility package stereotype "boundary"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 134789 "TcpBoundary"
+      visibility package stereotype "boundary"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 134917 "RangerControlRobot"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134533 // <generalisation>
+	relation 134533 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 134533 // <generalisation>
+	  b parent class_ref 134661 // BluetoothBoundary
+      end
+    end
+
+    class 135045 "Camera"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134661 // <generalisation>
+	relation 134661 ---|>
+	  a public
+	    cpp default "${type}"
+	    classrelation_ref 134661 // <generalisation>
+	  b parent class_ref 134789 // TcpBoundary
+      end
+    end
+
+    class 135173 "LeapMotion"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 134533 "getStates"
+	public explicit_return_type ""
+	nparams 0
+	cpp_decl "    ${comment}${friend}${static}${inline}${virtual}${type} ${name}${(}${)}${const}${volatile}${throw}${abstract};
+"
+	cpp_def "${comment}${inline}${type} ${class}::${name}${(}${)}${const}${volatile}${throw}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	
+      end
+
+      classrelation 135429 // <association>
+	relation_ref 135301 // <association>
+      end
+    end
+
+    class 135301 "RangerControlUser"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134789 // <directional composition>
+	relation 134789 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 134789 // <directional composition>
+	  b parent class_ref 134917 // RangerControlRobot
+      end
+
+      classrelation 134917 // <directional composition>
+	relation 134917 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 134917 // <directional composition>
+	  b parent class_ref 135045 // Camera
+      end
+
+      classrelation 135045 // <directional composition>
+	relation 135045 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 135045 // <directional composition>
+	  b parent class_ref 135173 // LeapMotion
+      end
+
+      classrelation 135173 // <directional composition>
+	relation 135173 *-->
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} ${name}${value};
+"
+	    classrelation_ref 135173 // <directional composition>
+	  b parent class_ref 135429 // Screen
+      end
+    end
+
+    class 135429 "Screen"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135301 // <association>
+	relation 135301 ----
+	  a role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 135301 // <association>
+	  b role_name "" private
+	    cpp default "    ${comment}${static}${thread_local}${mutable}${volatile}${const}${type} * ${name}${value};
+"
+	    classrelation_ref 135429 // <association>
+      end
+    end
+  end
+end

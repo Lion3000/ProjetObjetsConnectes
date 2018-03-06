@@ -1,0 +1,118 @@
+format 213
+
+deploymentnodecanvas 128002 deploymentnode_ref 128002 // ServeurDataBase
+  xyzwh 62 56 2000 227 153
+end
+deploymentnodecanvas 128130 deploymentnode_ref 128130 // GameServeur
+  name "n"
+  xyzwh 515 314 2000 217 161
+end
+deploymentnodecanvas 128258 deploymentnode_ref 128258 // AutentificationServeur
+  xyzwh 69 319 2000 225 157
+end
+deploymentnodecanvas 129154 deploymentnode_ref 128386 // Router
+  name "Server"
+  xyzwh 361 519 2000 111 35
+end
+note 129282 "Server"
+  color lightmediumgreen  xyzwh 50 24 0 775 551
+note 129666 "Customers"
+  color verylightorange  xyzwh 41 689 2000 785 171
+deploymentnodecanvas 129794 deploymentnode_ref 128514 // Computer
+  name "1"
+  xyzwh 63 749 2005 203 103
+end
+componentcanvas 131074 component_ref 128002 // Debian
+  
+  xyzwh 91 89 2006 167 57
+end
+componentcanvas 131202 component_ref 128002 // Debian
+  
+  xyzwh 538 350 2006 167 57
+end
+componentcanvas 131458 component_ref 128002 // Debian
+  
+  xyzwh 93 351 2006 167 57
+end
+componentcanvas 131714 component_ref 128130 // AuthenticationPortal
+  
+  color orange xyzwh 93 411 2006 167 57
+end
+componentcanvas 131842 component_ref 128258 // Cassandra
+  
+  color magenta xyzwh 90 149 2005 167 57
+end
+deploymentnodecanvas 131970 deploymentnode_ref 135554 // Switch
+  name "192.168.100.0"
+  xyzwh 305 241 2000 143 33
+end
+deploymentnodecanvas 132482 deploymentnode_ref 128130 // GameServeur
+  name "1"
+  xyzwh 517 66 2000 217 161
+end
+componentcanvas 132610 component_ref 128002 // Debian
+  
+  xyzwh 540.5 102.5 2006 167 57
+end
+deploymentnodecanvas 133506 deploymentnode_ref 128514 // Computer
+  name "2"
+  xyzwh 332 753 2005 199 101
+end
+deploymentnodecanvas 133634 deploymentnode_ref 128514 // Computer
+  name "n"
+  xyzwh 597 753 2005 201 97
+end
+deploymentnodecanvas 133890 deploymentnode_ref 128386 // Router
+  name "Customers"
+  xyzwh 368 696 2000 123 35
+end
+deploymentnodecanvas 134402 deploymentnode_ref 135810 // Ethernet
+  xyzwh 331 603 2000 197 61
+end
+componentcanvas 135170 component_ref 128386 // ServerGame
+  
+  color orange xyzwh 540 164 2006 167 57
+end
+componentcanvas 135298 component_ref 128386 // ServerGame
+  
+  color orange xyzwh 536 413 2006 167 57
+end
+componentcanvas 135426 component_ref 128514 // GameAPI
+  
+  color yellow xyzwh 75 789 2010 167 57
+end
+componentcanvas 135554 component_ref 128514 // GameAPI
+  
+  color yellow xyzwh 346 787 2010 167 57
+end
+componentcanvas 135682 component_ref 128514 // GameAPI
+  
+  color yellow xyzwh 613 784 2010 167 57
+end
+line 129410 ---- decenter_begin 778
+  from ref 128258 z 2001 label "TCP/IP" max_width 255 xyz 298 476 2001 to ref 129154
+line 129538 ----
+  from ref 128130 z 2001 label "TCP/IP" max_width 255 xyz 493 489 2001 to ref 129154
+line 132098 ----
+  from ref 128002 z 2001 to ref 131970
+line 132226 ----
+  from ref 128258 z 2001 to ref 131970
+line 132354 ----
+  from ref 131970 z 2001 to ref 128130
+line 132738 ----
+  from ref 131970 z 2001 to ref 132482
+line 132866 ----
+  from ref 132482 z 2001 to point 771 145
+  line 132994 z 2001 to point 763 525
+  line 133122 z 2001 label "TCP/IP" max_width 255 xyz 598 514 2001 to ref 129154
+line 134018 ----
+  from ref 129794 z 2006 to ref 133890
+line 134146 ----
+  from ref 133506 z 2006 to ref 133890
+line 134274 ----
+  from ref 133634 z 2006 to ref 133890
+line 134530 ----
+  from ref 129154 z 2001 to ref 134402
+line 135042 ----
+  from ref 133890 z 2001 to ref 134402
+end
