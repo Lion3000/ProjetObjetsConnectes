@@ -1,9 +1,9 @@
 # ProjetObjetsConnectes
 
 ## Groupe :
-Camélia Benhmida
-Alex Zarzitski
-Ivaylo Dimitrov
+- Camélia Benhmida
+- Alex Zarzitski
+- Ivaylo Dimitrov
 
 ## Matériel :
 - un robot Mbot Ranger Bluetooth + bras
