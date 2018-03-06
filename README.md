@@ -1,7 +1,7 @@
 # ProjetObjetsConnectes
 
 ## Groupe :
-- Camélia Benhmida
+- Camélia Zarzitski Benhmida
 - Alex Zarzitski
 - Ivaylo Dimitrov
 
