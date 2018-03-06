@@ -1,6 +1,6 @@
 format 216
 "ProjetObjetsConnectes" // ProjetObjetsConnectes
-  revision 2
+  revision 3
   modified_by 5 "Alex"
   // class settings
   
@@ -73,7 +73,6 @@ format 216
 
     deploymentnode 135173 "Moteur"
     end
-
   end
 
   classview 134533 "DiagrameDeClass"

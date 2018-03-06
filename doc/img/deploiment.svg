@@ -3,34 +3,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="1045" height="704" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <g>
-	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="383" y="598" width="161" height="28" />
-	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="383,598 396,585 557,585 557,613 544,626 544,598 383,598" />
-	<line stroke="black" stroke-opacity="1" x1="544" y1="598" x2="557" y2="585" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="464" y="611">ChenilleDroit:Moteur</text>
-</g>
-<g>
-	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="797" y="221" width="221" height="47" />
-	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="797,221 810,208 1031,208 1031,255 1018,268 1018,221 797,221" />
-	<line stroke="black" stroke-opacity="1" x1="1018" y1="221" x2="1031" y2="208" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="908" y="234">WifiSpot:Routeur</text>
-</g>
-<g>
-	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="260" y="216" width="260" height="48" />
-	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="260,216 273,203 533,203 533,251 520,264 520,216 260,216" />
-	<line stroke="black" stroke-opacity="1" x1="520" y1="216" x2="533" y2="203" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="390" y="229">SC-5178:Camera</text>
-</g>
-<g>
-	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="121" y="601" width="184" height="28" />
-	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="121,601 134,588 318,588 318,616 305,629 305,601 121,601" />
-	<line stroke="black" stroke-opacity="1" x1="305" y1="601" x2="318" y2="588" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="213" y="614">ChenilleGauche:Moteur</text>
-</g>
-<g>
-	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="17" y="298" width="109" height="28" />
-	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="17,298 30,285 139,285 139,313 126,326 126,298 17,298" />
-	<line stroke="black" stroke-opacity="1" x1="126" y1="298" x2="139" y2="285" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="72" y="311">Pince:Moteur</text>
+	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="261" y="296" width="257" height="229" />
+	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="261,296 274,283 531,283 531,512 518,525 518,296 261,296" />
+	<line stroke="black" stroke-opacity="1" x1="518" y1="296" x2="531" y2="283" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="390" y="309">Mbot Ranger + Bras:Robot</text>
 </g>
 <g>
 	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="30" y="480" width="101" height="28" />
@@ -39,10 +15,40 @@
 	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="81" y="493">Bras:Moteur</text>
 </g>
 <g>
+	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="121" y="601" width="184" height="28" />
+	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="121,601 134,588 318,588 318,616 305,629 305,601 121,601" />
+	<line stroke="black" stroke-opacity="1" x1="305" y1="601" x2="318" y2="588" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="213" y="614">ChenilleGauche:Moteur</text>
+</g>
+<g>
+	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="384" y="599" width="161" height="28" />
+	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="384,599 397,586 558,586 558,614 545,627 545,599 384,599" />
+	<line stroke="black" stroke-opacity="1" x1="545" y1="599" x2="558" y2="586" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="465" y="612">ChenilleDroit:Moteur</text>
+</g>
+<g>
+	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="17" y="298" width="109" height="28" />
+	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="17,298 30,285 139,285 139,313 126,326 126,298 17,298" />
+	<line stroke="black" stroke-opacity="1" x1="126" y1="298" x2="139" y2="285" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="72" y="311">Pince:Moteur</text>
+</g>
+<g>
 	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="794" y="328" width="226" height="265" />
 	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="794,328 807,315 1033,315 1033,580 1020,593 1020,328 794,328" />
 	<line stroke="black" stroke-opacity="1" x1="1020" y1="328" x2="1033" y2="315" />
 	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="907" y="341">:Ordinateur</text>
+</g>
+<g>
+	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="260" y="215" width="260" height="48" />
+	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="260,215 273,202 533,202 533,250 520,263 520,215 260,215" />
+	<line stroke="black" stroke-opacity="1" x1="520" y1="215" x2="533" y2="202" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="390" y="228">SC-5178:Camera</text>
+</g>
+<g>
+	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="797" y="221" width="221" height="47" />
+	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="797,221 810,208 1031,208 1031,255 1018,268 1018,221 797,221" />
+	<line stroke="black" stroke-opacity="1" x1="1018" y1="221" x2="1031" y2="208" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="908" y="234">WifiSpot:Routeur</text>
 </g>
 <g>
 	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="848" y="664" width="114" height="28" />
@@ -51,54 +57,49 @@
 	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="905" y="677">:LEAP Motion</text>
 </g>
 <g>
-	<rect fill="#dcdcdc" stroke="black" stroke-width="1" stroke-opacity="1" x="261" y="296" width="257" height="229" />
-	<polygon fill="#dcdcdc" stroke="black" stroke-opacity="1" points="261,296 274,283 531,283 531,512 518,525 518,296 261,296" />
-	<line stroke="black" stroke-opacity="1" x1="518" y1="296" x2="531" y2="283" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="390" y="309">Mbot Ranger + Bras:Robot</text>
-</g>
-<g>
-	<line stroke="black" stroke-opacity="1" x1="144" y1="470" x2="260" y2="439" />
+	<line stroke="black" stroke-opacity="1" x1="139" y1="323" x2="260" y2="360" />
 </g>
 <g>
 	<line stroke="black" stroke-opacity="1" x1="235" y1="587" x2="287" y2="525" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="139" y1="323" x2="260" y2="360" />
-</g>
-<g>
-	<line stroke="black" stroke-opacity="1" x1="461" y1="584" x2="439" y2="525" />
+	<line stroke="black" stroke-opacity="1" x1="911" y1="650" x2="911" y2="593" />
 </g>
 <g>
 	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="531" y1="416" x2="793" y2="418" />
 </g>
 <g>
+	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="533" y1="233" x2="796" y2="234" />
+</g>
+<g>
 	<line stroke="black" stroke-opacity="1" x1="913" y1="268" x2="913" y2="314" />
 </g>
 <g>
-	<line stroke-dasharray="4,4" stroke="black" stroke-opacity="1" x1="533" y1="234" x2="796" y2="234" />
+	<line stroke="black" stroke-opacity="1" x1="462" y1="585" x2="440" y2="525" />
 </g>
 <g>
-	<line stroke="black" stroke-opacity="1" x1="911" y1="650" x2="911" y2="593" />
+	<line stroke="black" stroke-opacity="1" x1="144" y1="470" x2="260" y2="439" />
 </g>
 <g>
-	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1016" y="362" width="4" height="67" />
-	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="810" y="425" width="210" height="4" />
-	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="805" y="357" width="211" height="68" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="911" y="381">&lt;&lt;component&gt;&gt;</text>
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="911" y="412">Windows</text>
-	<rect fill="none" stroke="black" stroke-width="1" stroke-opacity="1" x="994" y="362" width="17" height="27" />
-	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="989" y="367" width="10" height="4" />
-	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="989" y="378" width="10" height="4" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1016" y="363" width="4" height="67" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="810" y="426" width="210" height="4" />
+	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="805" y="358" width="211" height="68" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="911" y="382">&lt;&lt;component&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="911" y="413">Windows</text>
+	<rect fill="none" stroke="black" stroke-width="1" stroke-opacity="1" x="994" y="363" width="17" height="27" />
+	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="989" y="368" width="10" height="4" />
+	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="989" y="379" width="10" height="4" />
 </g>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="622" y="419">Bluetooth LE</text>
 <g>
-	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1013" y="518" width="4" height="67" />
-	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="807" y="581" width="210" height="4" />
-	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="802" y="513" width="211" height="68" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="908" y="537">&lt;&lt;component&gt;&gt;</text>
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="908" y="568">RangerControlUser</text>
-	<rect fill="none" stroke="black" stroke-width="1" stroke-opacity="1" x="991" y="518" width="17" height="27" />
-	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="986" y="523" width="10" height="4" />
-	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="986" y="534" width="10" height="4" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="488" y="412" width="4" height="67" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="282" y="475" width="210" height="4" />
+	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="277" y="407" width="211" height="68" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="383" y="431">&lt;&lt;component&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="383" y="462">RangerControlRobot</text>
+	<rect fill="none" stroke="black" stroke-width="1" stroke-opacity="1" x="466" y="412" width="17" height="27" />
+	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="461" y="417" width="10" height="4" />
+	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="461" y="428" width="10" height="4" />
 </g>
 <g>
 	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1016" y="438" width="4" height="67" />
@@ -111,16 +112,6 @@
 	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="989" y="454" width="10" height="4" />
 </g>
 <g>
-	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="488" y="410" width="4" height="67" />
-	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="282" y="473" width="210" height="4" />
-	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="277" y="405" width="211" height="68" />
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="383" y="429">&lt;&lt;component&gt;&gt;</text>
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="383" y="460">RangerControlRobot</text>
-	<rect fill="none" stroke="black" stroke-width="1" stroke-opacity="1" x="466" y="410" width="17" height="27" />
-	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="461" y="415" width="10" height="4" />
-	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="461" y="426" width="10" height="4" />
-</g>
-<g>
 	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="488" y="333" width="4" height="67" />
 	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="282" y="396" width="210" height="4" />
 	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="277" y="328" width="211" height="68" />
@@ -130,23 +121,33 @@
 	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="461" y="338" width="10" height="4" />
 	<rect fill="#c0ffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="461" y="349" width="10" height="4" />
 </g>
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="621" y="419">Bluetooth LE</text>
 <g>
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="927" y="294">&lt;&lt;USB&gt;&gt;</text>
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="1014" y="517" width="4" height="67" />
+	<rect fill="#cbcbcb" stroke="none" stroke-opacity="1" x="808" y="580" width="210" height="4" />
+	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="803" y="512" width="211" height="68" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-anchor="middle" x="909" y="536">&lt;&lt;component&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" font-weight="bold" text-anchor="middle" x="909" y="567">RangerControlUser</text>
+	<rect fill="none" stroke="black" stroke-width="1" stroke-opacity="1" x="992" y="517" width="17" height="27" />
+	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="987" y="522" width="10" height="4" />
+	<rect fill="#ffa858" stroke="black" stroke-width="1" stroke-opacity="1" x="987" y="533" width="10" height="4" />
 </g>
-<g>
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="917" y="621">&lt;&lt;USB&gt;&gt;</text>
-</g>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="638" y="232">Wifi</text>
 <g>
 	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="70" y="344">&lt;&lt;DoubleFlowPower&gt;&gt;</text>
 </g>
 <g>
-	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="76" y="449">&lt;&lt;DoubleFlowPower&gt;&gt;</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="918" y="294">&lt;&lt;Wifi&gt;&gt;</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="917" y="621">&lt;&lt;USB&gt;&gt;</text>
 </g>
 <g>
 	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="175" y="567">&lt;&lt;DoubleFlowPower&gt;&gt;</text>
 </g>
 <g>
 	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="364" y="565">&lt;&lt;DoubleFlowPower&gt;&gt;</text>
+</g>
+<g>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="76" y="449">&lt;&lt;DoubleFlowPower&gt;&gt;</text>
 </g>
 </svg>
