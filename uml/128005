@@ -1,7 +1,7 @@
 format 216
 "ProjetObjetsConnectes" // ProjetObjetsConnectes
-  revision 3
-  modified_by 5 "Alex"
+  revision 4
+  modified_by 2 "Camelia"
   // class settings
   
   classdiagramsettings member_max_width 0 end
