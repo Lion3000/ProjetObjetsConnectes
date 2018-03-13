@@ -1,15 +1,13 @@
 window_sizes 1920 1001 450 1464 819 128
 
 diagrams
-  active  deploymentdiagram_ref 134533 // diag
-    1171 655 130 A4 121 0
-  classdiagram_ref 134661 // diag
-    1464 819 100 A4 12 0
+  active  classdiagram_ref 134661 // diag
+    1464 819 100 A4 0 0
 end
 show_stereotypes
-selected deploymentdiagram_ref 134533 // diag
+selected 
+package_ref 128005 // ProjetObjetsConnectes
 open
-  componentview_ref 134533 // ComponentView
   deploymentnode_ref 135045 // LEAP Motion
   classview_ref 134533 // DiagrameDeClass
 end
