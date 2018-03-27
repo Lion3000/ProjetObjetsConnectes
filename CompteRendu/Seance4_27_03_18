@@ -1,0 +1,21 @@
+
+# Seance 4 27-03-2018
+
+## Les taches realisées
+
+### Alex Zarzitski
+- Abandon de la caméra commandée suite à de nombreux problème de comptabilité (drivers etc.)
+- Assemblage du robot pour ajouter le support téléphone 
+- Test de la caméra IP via le téléphone
+- Test de la caméra avec le bras robot en mouvement
+- Codage en C# d'une première application pour afficher le rendu de la caméra
+- Test de connexion au robot en bluetooth avec le téléphone
+
+### Camélia Zarzitski Benhmida
+- Codage en arduino du programme bluetooth serveur (tests échoués jusqu'à présent)
+- Codage en arduino des différentes actions à effectuer avec le robot
+- Test du contrôle du bras robotisé et des pinces
+- Test pour trouver la vitesse adéquate pour le ranger et les bras (ni trop rapide ni trop lent)
+
+### Ivaylo Dimitrov
+
