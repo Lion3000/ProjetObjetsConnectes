@@ -17,6 +17,8 @@ namespace RangerControlUser
         private Controller controller = new Controller();
         WriteableBitmap bitmap;
 
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -49,6 +51,16 @@ namespace RangerControlUser
                 }
 
                 controller.RequestImages( frame.Id, Leap.Image.ImageType.DEFAULT, imagedata );
+
+
+
+                if (frame.Hands.Count == 1) {
+                    // Arm control
+
+                } else if (frame.Hands.Count > 1) {
+                    // Tracks control
+
+                }
             }
 
             void onImageRequestFailed( object sender, ImageRequestFailedEventArgs e )

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BluetoothBoundary.cs" />
     <Compile Include="ControlStates.cs" />
+    <Compile Include="LeapBoundary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RangerControlRobot.cs" />
   </ItemGroup>
