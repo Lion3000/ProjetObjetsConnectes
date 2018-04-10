@@ -5,11 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RangerTools {
-    class LeapBoundary {
+    public class LeapBoundary {
         public enum Modes {
             ARM,
+            GRIP,
             TRACKS,
             IDLE
+        }
+
+        public enum HandId {
+            LEFT,
+            RIGHT
         }
 
         public enum HandState {
@@ -39,8 +45,14 @@ namespace RangerTools {
         }
 
         public int HandCount {
-            get;
-            set;
+            get {
+                int count = 0;
+                if(LeftActive)
+                    count++;
+                if (RightActive)
+                    count++;
+                return count;
+            }
         }
 
         public float LeftRotationAnalogue {
@@ -78,7 +90,7 @@ namespace RangerTools {
         public HandState LeftState {
             get {
                 if(LeftActive) {
-                    if(LeftFist > 0.5f)
+                    if(LeftFist == 1f)
                         return HandState.FIST;
                     else
                         return HandState.PALM;
@@ -101,7 +113,7 @@ namespace RangerTools {
         public HandState RightState {
             get {
                 if(RightActive) {
-                    if(RightFist > 0.5f)
+                    if(RightFist > 1f)
                         return HandState.FIST;
                     else
                         return HandState.PALM;
@@ -113,9 +125,18 @@ namespace RangerTools {
 
         public Modes Mode {
             get {
-                if(HandCount == 1)
-                    return Modes.ARM;
-                else if(HandCount > 1)
+                if(HandCount == 1) {
+                    HandRotation rotation;
+                    if(LeftActive)
+                        rotation = LeftRotation;
+                    else
+                        rotation = RightRotation;
+                    if(rotation == HandRotation.HORIZONTAL)
+                        return Modes.GRIP;
+                    else if(rotation == HandRotation.VERTICAL)
+                        return Modes.ARM;
+                    else return Modes.IDLE;
+                } else if(HandCount > 1)
                     return Modes.TRACKS;
                 else
                     return Modes.IDLE;
@@ -123,8 +144,6 @@ namespace RangerTools {
         }
 
         private LeapBoundary () {
-            HandCount = 0;
-
             LeftRotationAnalogue = 0f;
             LeftActive = false;
             LeftFist = 0f;
@@ -134,10 +153,20 @@ namespace RangerTools {
             RightFist = 0f;
         }
 
+        public void setHandAttributes (HandId hand, float rotationAnalogue, float fist) {
+            if (hand == HandId.LEFT) {
+                LeftRotationAnalogue = rotationAnalogue;
+                LeftFist = fist;
+            } else {
+                RightRotationAnalogue = rotationAnalogue;
+                RightFist = fist;
+            }
+        }
+
         private HandRotation angleToRotation (float angle) {
-            if(angle > 7.5f)
+            if(angle > 0.75f)
                 return HandRotation.VERTICAL;
-            else if(angle > 2.5)
+            else if(angle > 0.25f)
                 return HandRotation.HORIZONTAL;
             else
                 return HandRotation.INVALID;

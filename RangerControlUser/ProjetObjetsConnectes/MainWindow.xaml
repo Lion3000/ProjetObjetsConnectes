@@ -11,10 +11,16 @@
         <Label x:Name="displayTimestamp" Content="Label" HorizontalAlignment="Left" Margin="107,32,0,0" VerticalAlignment="Top"/>
         <Label x:Name="displayFPS" Content="Label" HorizontalAlignment="Left" Margin="197,32,0,0" VerticalAlignment="Top"/>
         <Label x:Name="displayHandCount" Content="Label" HorizontalAlignment="Left" Margin="287,32,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="displayImages" HorizontalAlignment="Left" Height="480" VerticalAlignment="Top" Width="640" Margin="10,58,0,0"/>
-        <TextBox x:Name="debugText" HorizontalAlignment="Left" Height="178" Margin="10,555,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="699"/>
+        <Image x:Name="displayImages" HorizontalAlignment="Left" Height="480" VerticalAlignment="Top" Width="640" Margin="10,92,0,0"/>
+        <TextBox x:Name="debugText" HorizontalAlignment="Left" Height="178" Margin="10,589,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="699"/>
         <Label x:Name="displayIsFist" Content="Label" HorizontalAlignment="Left" Margin="35,1,0,0" VerticalAlignment="Top"/>
         <Label x:Name="displayPalmRotation" Content="Label" HorizontalAlignment="Left" Margin="107,1,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.564"/>
         <Label x:Name="displayDebug" Content="Label" HorizontalAlignment="Left" Margin="410,1,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="modeText" Content="Mode:" HorizontalAlignment="Left" Margin="35,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="mode" Content="Label" HorizontalAlignment="Left" Margin="107,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="leftText" Content="Left:" HorizontalAlignment="Left" Margin="198,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="left" Content="Label" HorizontalAlignment="Left" Margin="270,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="rightText" Content="Right:" HorizontalAlignment="Left" Margin="345,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="right" Content="Label" HorizontalAlignment="Left" Margin="417,66,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

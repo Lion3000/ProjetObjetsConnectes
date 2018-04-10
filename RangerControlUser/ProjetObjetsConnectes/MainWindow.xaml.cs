@@ -1,4 +1,6 @@
 ﻿using Leap;
+using RangerTools;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Windows;
@@ -16,12 +18,15 @@ namespace RangerControlUser
         private byte[] imagedata = new byte[1];
         private Controller controller = new Controller();
         WriteableBitmap bitmap;
+        LeapBoundary leapBoundary;
 
         
 
         public MainWindow()
         {
             InitializeComponent();
+
+            leapBoundary = LeapBoundary.Instance;
 
             //set greyscale palette for WriteableBitmap object
             List<Color> grayscale = new List<Color>();
@@ -46,21 +51,38 @@ namespace RangerControlUser
                 this.displayFPS.Content = frame.CurrentFramesPerSecond.ToString();
                 this.displayHandCount.Content = frame.Hands.Count.ToString();
                 if (frame.Hands.Count > 0) {
-                    this.displayIsFist.Content = frame.Hands[0].PinchStrength;
-                    this.displayPalmRotation.Content = frame.Hands[0].Rotation;
+                    this.displayIsFist.Content = frame.Hands[0].GrabStrength;
+                    this.displayPalmRotation.Content = frame.Hands[0].Rotation.w;
                 }
 
                 controller.RequestImages( frame.Id, Leap.Image.ImageType.DEFAULT, imagedata );
 
-
-
-                if (frame.Hands.Count == 1) {
-                    // Arm control
-
-                } else if (frame.Hands.Count > 1) {
-                    // Tracks control
-
+                Hand rightHand = null, leftHand = null;
+                for(int i = 0; i < frame.Hands.Count && (leftHand == null || rightHand == null); i++) {
+                    if (frame.Hands[i].IsLeft) {
+                        if (leftHand == null)
+                            leftHand = frame.Hands[i];
+                    } else {
+                        if (rightHand == null)
+                        rightHand = frame.Hands[i];
+                    }
                 }
+
+                if(leftHand != null) {
+                    leapBoundary.LeftActive = true;
+                    leapBoundary.setHandAttributes(LeapBoundary.HandId.LEFT, leftHand.Rotation.w, leftHand.GrabStrength);
+                } else {
+                    leapBoundary.LeftActive = false;
+                }
+
+                if(rightHand != null) {
+                    leapBoundary.RightActive = true;
+                    leapBoundary.setHandAttributes( LeapBoundary.HandId.RIGHT, rightHand.Rotation.w, rightHand.GrabStrength );
+                } else {
+                    leapBoundary.RightActive = false;
+                }
+
+                this.mode.Content = Enum.GetName( typeof( LeapBoundary.Modes ), leapBoundary.Mode );
             }
 
             void onImageRequestFailed( object sender, ImageRequestFailedEventArgs e )
