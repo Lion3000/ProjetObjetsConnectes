@@ -2,13 +2,12 @@ window_sizes 1920 1001 450 1464 819 128
 
 diagrams
   active  classdiagram_ref 134661 // diag
-    1464 819 100 A4 0 0
+    1464 819 100 A4 12 0
 end
 show_stereotypes
-selected 
-package_ref 128005 // ProjetObjetsConnectes
+selected classview_ref 134533 // DiagrameDeClass
 open
-  deploymentnode_ref 135045 // LEAP Motion
-  classview_ref 134533 // DiagrameDeClass
+  
+package_ref 128005 // ProjetObjetsConnectes
 end
 end

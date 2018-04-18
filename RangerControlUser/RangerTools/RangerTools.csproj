@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BluetoothBoundary.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="ControlStates.cs" />
     <Compile Include="LeapBoundary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
