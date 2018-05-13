@@ -113,7 +113,7 @@ namespace RangerTools {
         public HandState RightState {
             get {
                 if(RightActive) {
-                    if(RightFist > 1f)
+                    if(RightFist == 1f)
                         return HandState.FIST;
                     else
                         return HandState.PALM;
@@ -170,6 +170,47 @@ namespace RangerTools {
                 return HandRotation.HORIZONTAL;
             else
                 return HandRotation.INVALID;
+        }
+
+        public ControlStates toControlState() {
+            ControlStates state = ControlStates.ALL_STOP;
+            HandState handState;
+
+            switch (this.Mode) {
+                case Modes.TRACKS:
+                    if (LeftState == HandState.PALM && RightState == HandState.PALM) {
+                        state = ControlStates.TRACKS_FORWARD;
+                    } else if (LeftState == HandState.PALM && (RightState == HandState.INACTIVE || RightState == HandState.FIST)) {
+                        state = ControlStates.TRACK_TURN_RIGHT;
+                    } else if (RightState == HandState.PALM && (LeftState == HandState.INACTIVE || LeftState == HandState.FIST)) {
+                        state = ControlStates.TRACK_TURN_LEFT;
+                    }
+                    break;
+                case Modes.ARM:
+                    if (LeftActive)
+                        handState = LeftState;
+                    else
+                        handState = RightState;
+
+                    if (handState == HandState.FIST)
+                        state = ControlStates.ARM_DOWN;
+                    else if (handState == HandState.PALM)
+                        state = ControlStates.ARM_UP;
+                    break;
+                case Modes.GRIP:
+                    if (LeftActive)
+                        handState = LeftState;
+                    else
+                        handState = RightState;
+
+                    if (handState == HandState.FIST)
+                        state = ControlStates.GRIPPER_CLOSE;
+                    else if (handState == HandState.PALM)
+                        state = ControlStates.GRIPPER_OPEN;
+                    break;
+            }
+
+            return state;
         }
     }
 }
