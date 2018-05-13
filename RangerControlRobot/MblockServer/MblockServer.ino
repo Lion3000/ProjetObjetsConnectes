@@ -1,16 +1,16 @@
+///
+/// \file MblockServer.c
+/// \brief Permet de contrôler le robot
+/// \author Camélia Benhmida Zarzitski
+
 #include <Arduino.h>
 #include <Wire.h>
 #include <MeAuriga.h>
 #include <SoftwareSerial.h>
 
-// DEFINITION DES MOTEURS
-MeEncoderOnBoard Encoder_1(SLOT1);  // moteur ranger gauche
-MeEncoderOnBoard Encoder_2(SLOT2);  // moteur ranger droit
-MeDCMotor motor_1(1); // moteur bras
-MeDCMotor motor_2(2); // moteur pinces
-
+/// \def Enum des commandes possibles
 // DÉFINITION DE L'ENUM DES COMMANDES
-// A EFFECTUER
+///
 #define TRACKS_FORWARD 0
 #define TRACKS_BACKWARD 1 
 #define TRACK_TURN_LEFT 2
@@ -30,6 +30,13 @@ MeDCMotor motor_2(2); // moteur pinces
 #define TURN_LEFT 3
 #define TURN_RIGHT 4
 
+// DEFINITION DES MOTEURS
+MeEncoderOnBoard Encoder_1(SLOT1);  // moteur ranger gauche
+MeEncoderOnBoard Encoder_2(SLOT2);  // moteur ranger droit
+MeDCMotor motor_1(1); // moteur bras
+MeDCMotor motor_2(2); // moteur pinces
+
+// Définition de la vitesse des moteurs roues
 int8_t Speed = 150;
 
 // DÉFINITION DES INTERRUPTIONS
@@ -50,8 +57,10 @@ void isr_process_encoder2(void)
             Encoder_2.pulsePosPlus();
       }
 }
-
+///
+/// \fn move(int direction, int speed)
 // Fonction qui permet de déplacer le robot
+///
 void move(int direction, int speed)
 {
       int leftSpeed = 0;
@@ -96,17 +105,30 @@ void setup(){
     Encoder_2.setRatio(39.267);
     Encoder_2.setPosPid(1.8,0,1.2);
     Encoder_2.setSpeedPid(0.18,0,0);
-    Serial.begin(9600);
+    Serial.begin(9600, SERIAL_8E1);
 }
 
+///
+/// \fn int getIntFromSerial(char c1, char c2)
+/// \brief Fonction qui permet de calculer la 
+/// valeur reçue en sérial
+/// \param c1 char le premier caractère reçu
+/// \param c2 char le second caractère reçu
+/// \return int : entier correspondant à la 
+/// commande reçue
+///
 int getIntFromSerial(char c1, char c2){  
+  int in1 = c1 - '0';
+  int in2 = c2 - '0';
+  Serial.println(in1); 
+  Serial.println(in2);
   if(c1 == '0'){
     return c2 - '0';
-    Serial.println(c1);
+   // Serial.println(c1);
   }
   else{
     int i2 = c2 - '0';
-    Serial.println(i2);  
+   // Serial.println(i2);  
     switch(i2){
       case 0 :
       return 10;
@@ -128,32 +150,42 @@ int getIntFromSerial(char c1, char c2){
 }
 void loop(){
      _loop(); 
+     char recievedData[2];
      if (Serial.available() > 1) {
-      char c1 = Serial.read();
-      char c2 = Serial.read();
-      int cmd = getIntFromSerial(c1, c2);
-      Serial.print("I received: ");
-      Serial.println(cmd);  
-      // contrôle du robot en fonction de la commande reçue
-      switch(cmd){                
+      recievedData[0] = Serial.read();
+      recievedData[1] = Serial.read();
+      int cmd = getIntFromSerial(recievedData[0], recievedData[1]);
+      controlRobot(cmd);
+    }   
+}
+
+///
+/// \fn int controlRobot(int cmd)
+/// \brief contrôle le robot selon 
+/// la commande reçue
+/// \param cmd int : entier correspondant 
+/// à la commande reçue
+///
+void controlRobot(int cmd){
+  switch(cmd){                
         case TRACKS_FORWARD:
-          Serial.print("AVANCER ");
+         // Serial.print("AVANCER ");
           move(FORWARD, Speed);
         break;
         case TRACKS_BACKWARD:
-          Serial.print("RECULER ");
+         // Serial.print("RECULER ");
           move(BACKWARD, Speed);
         break;
         case TRACK_TURN_LEFT:
-          Serial.print("TOURNER A GAUCHE ");
+         // Serial.print("TOURNER A GAUCHE ");
           move(TURN_LEFT, Speed);
         break;
         case TRACK_TURN_RIGHT:
-          Serial.print("TOURNER A DROITE ");
+        //  Serial.print("TOURNER A DROITE ");
           move(TURN_RIGHT, Speed);
         break;
         case TRACKS_STOP:
-          Serial.print("TRACKS STOP ");
+        //  Serial.print("TRACKS STOP ");
           move(FORWARD, 0);
         break;
         case ARM_UP:
@@ -169,25 +201,25 @@ void loop(){
           motor_1.run(0);
         break; 
         case GRIPPER_OPEN:
-          Serial.print("GRIPPER OPEN ");
+        //  Serial.print("GRIPPER OPEN ");
           motor_2.run(-110);
         break;       
          case GRIPPER_CLOSE:
-          Serial.print("GRIPPER CLOSE ");
+        //  Serial.print("GRIPPER CLOSE ");
           motor_2.run(110);
         break; 
         case GRIPPER_STOP:
           motor_2.run(0);
         break;  
         case ALL_STOP:
-          Serial.print("STOP ALL ");
+        //  Serial.print("STOP ALL ");
           motor_2.run(0);
           motor_1.run(0);
           move(FORWARD, 0);
         break;          
-      }
-    }   
+    }
 }
+
 void _loop(){
     Encoder_1.loop();
     Encoder_2.loop();

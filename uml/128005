@@ -1,6 +1,6 @@
 format 216
 "ProjetObjetsConnectes" // ProjetObjetsConnectes
-  revision 4
+  revision 5
   modified_by 2 "Camelia"
   // class settings
   
@@ -75,7 +75,7 @@ format 216
     end
   end
 
-  classview 134533 "DiagrameDeClass"
+  classview 134533 "DiagrameDeClasses"
     
     classdiagramsettings member_max_width 0 end
     
@@ -261,7 +261,7 @@ ${items}};
       end
     end
 
-    class 134661 "BluetoothBoundary"
+    class 134661 "SerialBoundary"
       visibility package stereotype "boundary"
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
@@ -313,7 +313,7 @@ ${inlines}
 	  a public
 	    cpp default "${type}"
 	    classrelation_ref 134533 // <generalisation>
-	  b parent class_ref 134661 // BluetoothBoundary
+	  b parent class_ref 134661 // SerialBoundary
       end
     end
 
@@ -445,6 +445,189 @@ ${inlines}
 "
 	    classrelation_ref 135429 // <association>
       end
+    end
+
+    sequencediagram 128130 "sequenceDiag"
+      sequencediagramsettings end
+      overlapping_bars size A4
+    end
+
+    class 128130 "Robot"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 128258 "Ordinateur"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 128386 "User"
+      visibility package 
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+  end
+
+  usecaseview 128002 "ucView"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    objectdiagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
+    usecasediagram 128002 "ucDiag"
+      usecasediagramsettings end
+      size A4
+    end
+
+    class 128002 "Utilisateur"
+      visibility package stereotype "actor"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    usecase 128002 "faireAvancerLeRobot"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      objectdiagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128130 "faireReculerLeRobot"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      objectdiagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128258 "arrêterLeRobot"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      objectdiagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128386 "faireBougerLesPinces"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      objectdiagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128514 "faireBougerLeBras"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      objectdiagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
     end
   end
 end

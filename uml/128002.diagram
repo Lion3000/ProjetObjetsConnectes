@@ -1,118 +1,48 @@
-format 213
+format 216
 
-deploymentnodecanvas 128002 deploymentnode_ref 128002 // ServeurDataBase
-  xyzwh 62 56 2000 227 153
+subject 128002 ""
+  xyzwh 200.4 58.2 2000 258 304
+classcanvas 128130 class_ref 128002 // Utilisateur
+  simpleclassdiagramsettings end
+  xyz 33.6 156.8 2005
 end
-deploymentnodecanvas 128130 deploymentnode_ref 128130 // GameServeur
-  name "n"
-  xyzwh 515 314 2000 217 161
+usecasecanvas 128258 usecase_ref 128002 // faireAvancerLeRobot
+  xyzwh 239.6 248 3005 167 35 label_xy 259 256
 end
-deploymentnodecanvas 128258 deploymentnode_ref 128258 // AutentificationServeur
-  xyzwh 69 319 2000 225 157
+usecasecanvas 128386 usecase_ref 128130 // faireReculerLeRobot
+  xyzwh 241.6 86.8 3005 173 41 label_xy 267 99
 end
-deploymentnodecanvas 129154 deploymentnode_ref 128386 // Router
-  name "Server"
-  xyzwh 361 519 2000 111 35
+usecasecanvas 128514 usecase_ref 128258 // arrêterLeRobot
+  xyzwh 246.8 139.8 3010 161 35 label_xy 279 146
 end
-note 129282 "Server"
-  color lightmediumgreen  xyzwh 50 24 0 775 551
-note 129666 "Customers"
-  color verylightorange  xyzwh 41 689 2000 785 171
-deploymentnodecanvas 129794 deploymentnode_ref 128514 // Computer
-  name "1"
-  xyzwh 63 749 2005 203 103
+usecasecanvas 128642 usecase_ref 128386 // faireBougerLesPinces
+  xyzwh 257.2 182.4 3010 164 43 label_xy 271 195
 end
-componentcanvas 131074 component_ref 128002 // Debian
-  
-  xyzwh 91 89 2006 167 57
+usecasecanvas 128770 usecase_ref 128514 // faireBougerLeBras
+  xyzwh 237.2 294.6 3005 175 37 label_xy 270 302
 end
-componentcanvas 131202 component_ref 128002 // Debian
-  
-  xyzwh 538 350 2006 167 57
+classcanvas 128898 class_ref 135173 // LeapMotion
+  simpleclassdiagramsettings class_drawing_mode control end
+  xyz 576.8 166.2 2000
 end
-componentcanvas 131458 component_ref 128002 // Debian
-  
-  xyzwh 93 351 2006 167 57
-end
-componentcanvas 131714 component_ref 128130 // AuthenticationPortal
-  
-  color orange xyzwh 93 411 2006 167 57
-end
-componentcanvas 131842 component_ref 128258 // Cassandra
-  
-  color magenta xyzwh 90 149 2005 167 57
-end
-deploymentnodecanvas 131970 deploymentnode_ref 135554 // Switch
-  name "192.168.100.0"
-  xyzwh 305 241 2000 143 33
-end
-deploymentnodecanvas 132482 deploymentnode_ref 128130 // GameServeur
-  name "1"
-  xyzwh 517 66 2000 217 161
-end
-componentcanvas 132610 component_ref 128002 // Debian
-  
-  xyzwh 540.5 102.5 2006 167 57
-end
-deploymentnodecanvas 133506 deploymentnode_ref 128514 // Computer
-  name "2"
-  xyzwh 332 753 2005 199 101
-end
-deploymentnodecanvas 133634 deploymentnode_ref 128514 // Computer
-  name "n"
-  xyzwh 597 753 2005 201 97
-end
-deploymentnodecanvas 133890 deploymentnode_ref 128386 // Router
-  name "Customers"
-  xyzwh 368 696 2000 123 35
-end
-deploymentnodecanvas 134402 deploymentnode_ref 135810 // Ethernet
-  xyzwh 331 603 2000 197 61
-end
-componentcanvas 135170 component_ref 128386 // ServerGame
-  
-  color orange xyzwh 540 164 2006 167 57
-end
-componentcanvas 135298 component_ref 128386 // ServerGame
-  
-  color orange xyzwh 536 413 2006 167 57
-end
-componentcanvas 135426 component_ref 128514 // GameAPI
-  
-  color yellow xyzwh 75 789 2010 167 57
-end
-componentcanvas 135554 component_ref 128514 // GameAPI
-  
-  color yellow xyzwh 346 787 2010 167 57
-end
-componentcanvas 135682 component_ref 128514 // GameAPI
-  
-  color yellow xyzwh 613 784 2010 167 57
-end
-line 129410 ---- decenter_begin 778
-  from ref 128258 z 2001 label "TCP/IP" max_width 255 xyz 298 476 2001 to ref 129154
+line 129026 ----
+  from ref 128386 z 3006 to ref 128898
+line 129154 ----
+  from ref 128514 z 3011 to ref 128898
+line 129282 ----
+  from ref 128642 z 3011 to ref 128898
+line 129410 ----
+  from ref 128258 z 3006 to ref 128898
 line 129538 ----
-  from ref 128130 z 2001 label "TCP/IP" max_width 255 xyz 493 489 2001 to ref 129154
-line 132098 ----
-  from ref 128002 z 2001 to ref 131970
-line 132226 ----
-  from ref 128258 z 2001 to ref 131970
-line 132354 ----
-  from ref 131970 z 2001 to ref 128130
-line 132738 ----
-  from ref 131970 z 2001 to ref 132482
-line 132866 ----
-  from ref 132482 z 2001 to point 771 145
-  line 132994 z 2001 to point 763 525
-  line 133122 z 2001 label "TCP/IP" max_width 255 xyz 598 514 2001 to ref 129154
-line 134018 ----
-  from ref 129794 z 2006 to ref 133890
-line 134146 ----
-  from ref 133506 z 2006 to ref 133890
-line 134274 ----
-  from ref 133634 z 2006 to ref 133890
-line 134530 ----
-  from ref 129154 z 2001 to ref 134402
-line 135042 ----
-  from ref 133890 z 2001 to ref 134402
+  from ref 128770 z 3006 to ref 128898
+line 129666 ----
+  from ref 128130 z 3006 to ref 128386
+line 129794 ----
+  from ref 128130 z 3011 to ref 128514
+line 129922 ----
+  from ref 128130 z 3011 to ref 128642
+line 130050 ----
+  from ref 128130 z 3006 to ref 128258
+line 130178 ----
+  from ref 128130 z 3006 to ref 128770
 end

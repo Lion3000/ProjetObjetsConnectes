@@ -4,36 +4,36 @@ classcanvas 128005 class_ref 134533 // ControlStates
   classdiagramsettings member_max_width 0 end
   xyz 29 31 2000
 end
-classcanvas 128133 class_ref 134661 // BluetoothBoundary
+classcanvas 128133 class_ref 134661 // SerialBoundary
   classdiagramsettings member_max_width 0 end
-  xyz 100 419 2000
+  xyz 77 374 2000
 end
 classcanvas 128261 class_ref 134789 // TcpBoundary
   classdiagramsettings member_max_width 0 end
-  xyz 516 288 2000
+  xyz 601 347 2000
 end
 classcanvas 128389 class_ref 134917 // RangerControlRobot
   classdiagramsettings member_max_width 0 end
-  xyz 155 518 2000
+  xyz 132 473 2000
 end
 classcanvas 128645 class_ref 135045 // Camera
   classdiagramsettings member_max_width 0 end
-  xyz 504 396 2000
+  xyz 481 351 2000
 end
 classcanvas 128901 class_ref 135173 // LeapMotion
   classdiagramsettings member_max_width 0 end
-  xyz 616 664 2005
+  xyzwh 588 619 2005 91 53
 end
 classcanvas 129029 class_ref 135301 // RangerControlUser
   classdiagramsettings member_max_width 0 end
-  xyz 297 663 2000
+  xyz 274 618 2000
 end
 classcanvas 129541 class_ref 135429 // Screen
   classdiagramsettings member_max_width 0 end
-  xyz 623 550 2000
+  xyz 600 505 2000
 end
 note 130053 "paketge"
-  color magenta  xyzwh 564 624 2000 231 181
+  color magenta  xyzwh 541 579 2000 231 181
 relationcanvas 128517 relation_ref 134533 // <generalisation>
   from ref 128389 z 2001 to ref 128133
   no_role_a no_role_b

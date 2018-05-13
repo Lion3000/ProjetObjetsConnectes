@@ -1,13 +1,17 @@
 window_sizes 1920 1001 450 1464 819 128
 
 diagrams
-  active  deploymentdiagram_ref 134533 // diag
+  deploymentdiagram_ref 134533 // diag
+    1171 655 100 A4 0 0
+  usecasediagram_ref 128002 // ucDiag
+    1171 655 119 A4 0 0
+  active  sequencediagram_ref 128130 // sequenceDiag
     1171 655 100 A4 0 0
 end
 show_stereotypes
-selected deploymentdiagram_ref 134533 // diag
+selected classdiagram_ref 134661 // diag
 open
-  deploymentview_ref 134533 // DiagrameDeDeploiement
-  classview_ref 134533 // DiagrameDeClass
+  classview_ref 134533 // DiagrameDeClasses
+  usecaseview_ref 128002 // ucView
 end
 end

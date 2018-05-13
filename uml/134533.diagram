@@ -54,7 +54,7 @@ componentcanvas 131333 component_ref 135045 // LeapSDK
   
   xyzwh 619.8 333.4 2006 167 57
 end
-textcanvas 131461 "<< Bluetooth LE >>"
+textcanvas 131461 "<< Serial >>"
   xyzwh 451 299 2006 131 15
 textcanvas 131589 "<< Wifi >>"
   xyzwh 491 164 2006 73 15
