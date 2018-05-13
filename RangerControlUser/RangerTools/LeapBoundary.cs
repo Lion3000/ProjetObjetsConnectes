@@ -180,10 +180,12 @@ namespace RangerTools {
                 case Modes.TRACKS:
                     if (LeftState == HandState.PALM && RightState == HandState.PALM) {
                         state = ControlStates.TRACKS_FORWARD;
+                    } else if (LeftState == HandState.FIST && RightState == HandState.FIST) {
+                        state = ControlStates.TRACKS_BACKWARD;
                     } else if (LeftState == HandState.PALM && (RightState == HandState.INACTIVE || RightState == HandState.FIST)) {
-                        state = ControlStates.TRACK_TURN_RIGHT;
-                    } else if (RightState == HandState.PALM && (LeftState == HandState.INACTIVE || LeftState == HandState.FIST)) {
                         state = ControlStates.TRACK_TURN_LEFT;
+                    } else if (RightState == HandState.PALM && (LeftState == HandState.INACTIVE || LeftState == HandState.FIST)) {
+                        state = ControlStates.TRACK_TURN_RIGHT;
                     }
                     break;
                 case Modes.ARM:

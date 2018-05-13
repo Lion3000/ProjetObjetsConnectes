@@ -9,24 +9,8 @@
         WindowStyle="None" ResizeMode="NoResize"  
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
         Loaded="Window_Loaded">
-    <Grid>
-        <Grid>
-            <Label x:Name="displayID" Content="Label" HorizontalAlignment="Left" Margin="35,32,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="displayTimestamp" Content="Label" HorizontalAlignment="Left" Margin="107,32,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="displayFPS" Content="Label" HorizontalAlignment="Left" Margin="197,32,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="displayHandCount" Content="Label" HorizontalAlignment="Left" Margin="287,32,0,0" VerticalAlignment="Top"/>
-            <Image x:Name="displayImages" HorizontalAlignment="Left" Height="480" VerticalAlignment="Top" Width="640" Margin="10,92,0,0"/>
-            <TextBox x:Name="debugText" HorizontalAlignment="Left" Height="178" Margin="10,589,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="699"/>
-            <Label x:Name="displayIsFist" Content="Label" HorizontalAlignment="Left" Margin="35,1,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="displayPalmRotation" Content="Label" HorizontalAlignment="Left" Margin="107,1,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.465,0.564"/>
-            <Label x:Name="displayDebug" Content="Label" HorizontalAlignment="Left" Margin="410,1,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="modeText" Content="Mode:" HorizontalAlignment="Left" Margin="35,66,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="mode" Content="Label" HorizontalAlignment="Left" Margin="107,66,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="leftText" Content="Left:" HorizontalAlignment="Left" Margin="253,66,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="left" Content="Label" HorizontalAlignment="Left" Margin="325,66,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="rightText" Content="Right:" HorizontalAlignment="Left" Margin="400,66,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="right" Content="Label" HorizontalAlignment="Left" Margin="472,66,0,0" VerticalAlignment="Top"/>
-        </Grid>
-        <!--WebBrowser x:Name="myWebView" Margin="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.ColumnSpan="2" /-->
+    <Grid Margin="0,0,0,0">
+        <WebBrowser x:Name="myWebView" Margin="0,100,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.ColumnSpan="2" d:IsLocked="True" />
+        <TextBlock x:Name="mode" HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" Text="Teset" VerticalAlignment="Top" Foreground="#FFEB0303" FontSize="24" FontWeight="Bold"/>
     </Grid>
 </Window>
