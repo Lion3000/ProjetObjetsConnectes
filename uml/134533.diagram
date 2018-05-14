@@ -2,18 +2,14 @@ format 216
 
 deploymentnodecanvas 128005 deploymentnode_ref 134533 // Robot
   name "Mbot Ranger + Bras"
-  xyzwh 201 218 2000 209 187
+  xyzwh 227 312 2000 209 187
 end
 deploymentnodecanvas 128133 deploymentnode_ref 134661 // Ordinateur
   xyzwh 611 242 2000 185 215
 end
-deploymentnodecanvas 128261 deploymentnode_ref 134789 // Camera
-  name "SC-5178"
-  xyzwh 200 155 2000 211 48
-end
-deploymentnodecanvas 128517 deploymentnode_ref 134917 // Routeur
-  name "WifiSpot"
-  xyzwh 613 160 2000 181 47
+deploymentnodecanvas 128261 deploymentnode_ref 134789 // Smartphone
+  name "Camera"
+  xyzwh 231 48 2000 219 227
 end
 deploymentnodecanvas 129029 deploymentnode_ref 135045 // LEAP Motion
   xyzwh 652 500 2000 99 33
@@ -24,27 +20,27 @@ componentcanvas 129413 component_ref 134533 // Windows
 end
 deploymentnodecanvas 129797 deploymentnode_ref 135173 // Moteur
   name "ChenilleGauche"
-  xyzwh 93 452 2000 153 33
+  xyzwh 119 546 2000 153 33
 end
 deploymentnodecanvas 129925 deploymentnode_ref 135173 // Moteur
   name "ChenilleDroit"
-  xyzwh 295 450 2000 135 33
+  xyzwh 321 544 2000 135 33
 end
 deploymentnodecanvas 130053 deploymentnode_ref 135173 // Moteur
   name "Bras"
-  xyzwh 23 359 2000 89 33
+  xyzwh 49 453 2000 89 33
 end
 deploymentnodecanvas 130437 deploymentnode_ref 135173 // Moteur
   name "Pince"
-  xyzwh 13 219 2000 95 33
+  xyzwh 39 313 2000 95 33
 end
 componentcanvas 130821 component_ref 134661 // Arduino
   
-  xyzwh 213.4 252 2006 167 57
+  xyzwh 239.4 346 2006 167 57
 end
 componentcanvas 130949 component_ref 134789 // RangerControlRobot
   
-  color lightorange xyzwh 213.4 313.2 2006 167 57
+  color lightorange xyzwh 239.4 407.2 2006 167 57
 end
 componentcanvas 131077 component_ref 134917 // RangerControlUser
   
@@ -52,26 +48,36 @@ componentcanvas 131077 component_ref 134917 // RangerControlUser
 end
 componentcanvas 131333 component_ref 135045 // LeapSDK
   
-  xyzwh 619.8 333.4 2006 167 57
+  xyzwh 619.8 334.4 2006 167 57
 end
 textcanvas 131461 "<< Serial >>"
-  xyzwh 451 299 2006 131 15
+  xyzwh 476 329 2006 131 15
 textcanvas 131589 "<< Wifi >>"
-  xyzwh 491 164 2006 73 15
-line 128645 ----
-  from ref 128517 z 2001 stereotype "<<Wifi>>" xyz 707 218 3000 to ref 128133
+  xyzwh 527 240 2006 73 15
+componentcanvas 131845 component_ref 141573 // Android
+  
+  xyzwh 254 83 2006 167 57
+end
+componentcanvas 131973 component_ref 141701 // Routeur
+  
+  xyzwh 255 140 2006 167 57
+end
+componentcanvas 132101 component_ref 141829 // IP Webcam
+  
+  color lightorange xyzwh 255 200 2006 167 57
+end
 line 129157 ----
   from ref 129029 z 2001 stereotype "<<USB>>" xyz 706 469 3000 to ref 128133
 line 130181 ----
-  from ref 129797 z 2001 stereotype "<<StepByStep>>" xyz 149 427 3000 to ref 128005
+  from ref 129797 z 2001 stereotype "<<StepByStep>>" xyz 175 521 3000 to ref 128005
 line 130309 ----
-  from ref 129925 z 2001 stereotype "<<StepByStep>>" xyz 295 426 3000 to ref 128005
+  from ref 129925 z 2001 stereotype "<<StepByStep>>" xyz 321 520 3000 to ref 128005
 line 130565 ----
-  from ref 130437 z 2001 stereotype "<<DoubleFlowPower>>" xyz 53 256 3000 to ref 128005
+  from ref 130437 z 2001 stereotype "<<DoubleFlowPower>>" xyz 79 350 3000 to ref 128005
 line 130693 ----
-  from ref 130053 z 2001 stereotype "<<DoubleFlowPower>>" xyz 58 337 3000 to ref 128005
-line 129541 -_-_ decenter_end 442
-  from ref 128261 z 2001 to ref 128517
+  from ref 130053 z 2001 stereotype "<<DoubleFlowPower>>" xyz 84 431 3000 to ref 128005
 line 129669 -_-_ decenter_end 372
   from ref 128005 z 2001 to ref 128133
+line 131717 -_-_ decenter_end 101
+  from ref 128261 z 2001 to ref 128133
 end

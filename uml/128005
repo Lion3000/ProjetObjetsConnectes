@@ -1,7 +1,7 @@
 format 216
 "ProjetObjetsConnectes" // ProjetObjetsConnectes
-  revision 6
-  modified_by 2 "Camelia"
+  revision 7
+  modified_by 5 "Alex"
   // class settings
   
   classdiagramsettings member_max_width 0 end
@@ -44,6 +44,15 @@ format 216
 
     component 135045 "LeapSDK"
     end
+
+    component 141573 "Android"
+    end
+
+    component 141701 "Routeur"
+    end
+
+    component 141829 "IP Webcam"
+    end
   end
 
   deploymentview 134533 "DiagrameDeDeploiement"
@@ -62,7 +71,7 @@ format 216
     deploymentnode 134661 "Ordinateur"
     end
 
-    deploymentnode 134789 "Camera"
+    deploymentnode 134789 "Smartphone"
     end
 
     deploymentnode 134917 "Routeur"
@@ -612,6 +621,25 @@ ${inlines}
     end
 
     usecase 128514 "VisualiserAction"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      objectdiagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128005 "Configurer"
       
       usecasediagramsettings end
       
