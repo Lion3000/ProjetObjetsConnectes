@@ -1,48 +1,35 @@
 format 216
 
 subject 128002 ""
-  xyzwh 200.4 58.2 2000 258 304
+  xyzwh 200.36 58.33 2000 258 304
 classcanvas 128130 class_ref 128002 // Utilisateur
   simpleclassdiagramsettings end
-  xyz 33.6 156.8 2005
+  xyz 33.22 156.96 2005
 end
-usecasecanvas 128258 usecase_ref 128002 // faireAvancerLeRobot
-  xyzwh 239.6 248 3005 167 35 label_xy 259 256
+usecasecanvas 128514 usecase_ref 128258 // ControlerRobot
+  xyzwh 249.39 180.71 3010 161 35 label_xy 283 188
 end
-usecasecanvas 128386 usecase_ref 128130 // faireReculerLeRobot
-  xyzwh 241.6 86.8 3005 173 41 label_xy 267 99
-end
-usecasecanvas 128514 usecase_ref 128258 // arrêterLeRobot
-  xyzwh 246.8 139.8 3010 161 35 label_xy 279 146
-end
-usecasecanvas 128642 usecase_ref 128386 // faireBougerLesPinces
-  xyzwh 257.2 182.4 3010 164 43 label_xy 271 195
-end
-usecasecanvas 128770 usecase_ref 128514 // faireBougerLeBras
-  xyzwh 237.2 294.6 3005 175 37 label_xy 270 302
+usecasecanvas 128770 usecase_ref 128514 // VisualiserAction
+  xyzwh 237.68 294.84 3005 175 37 label_xy 276 302
 end
 classcanvas 128898 class_ref 135173 // LeapMotion
   simpleclassdiagramsettings class_drawing_mode control end
-  xyz 576.8 166.2 2000
+  xyz 523.12 172.07 2000
 end
-line 129026 ----
-  from ref 128386 z 3006 to ref 128898
-line 129154 ----
-  from ref 128514 z 3011 to ref 128898
-line 129282 ----
-  from ref 128642 z 3011 to ref 128898
-line 129410 ----
-  from ref 128258 z 3006 to ref 128898
-line 129538 ----
-  from ref 128770 z 3006 to ref 128898
-line 129666 ----
-  from ref 128130 z 3006 to ref 128386
+classcanvas 130306 class_ref 135045 // Camera
+  simpleclassdiagramsettings class_drawing_mode boundary end
+  xyz 537.42 260.73 2000
+end
+classcanvas 130434 class_ref 128130 // Robot
+  simpleclassdiagramsettings class_drawing_mode interface end
+  xyz 539.56 88.72 2000
+end
 line 129794 ----
   from ref 128130 z 3011 to ref 128514
-line 129922 ----
-  from ref 128130 z 3011 to ref 128642
-line 130050 ----
-  from ref 128130 z 3006 to ref 128258
 line 130178 ----
   from ref 128130 z 3006 to ref 128770
+line 130562 ----
+  from ref 128514 z 3011 to ref 130434
+line 130690 --->
+  from ref 128514 z 3011 to ref 128898
 end

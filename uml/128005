@@ -1,6 +1,6 @@
 format 216
 "ProjetObjetsConnectes" // ProjetObjetsConnectes
-  revision 5
+  revision 6
   modified_by 2 "Camelia"
   // class settings
   
@@ -573,7 +573,7 @@ ${inlines}
        end
     end
 
-    usecase 128258 "arrêterLeRobot"
+    usecase 128258 "ControlerRobot"
       
       usecasediagramsettings end
       
@@ -611,7 +611,7 @@ ${inlines}
        end
     end
 
-    usecase 128514 "faireBougerLeBras"
+    usecase 128514 "VisualiserAction"
       
       usecasediagramsettings end
       
