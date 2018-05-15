@@ -36,7 +36,7 @@ MeEncoderOnBoard Encoder_2(SLOT2);  // moteur ranger droit
 MeDCMotor motor_1(1); // moteur bras
 MeDCMotor motor_2(2); // moteur pinces
 
-// Définition de la vitesse des moteurs roues
+// Définition de la vitesse des moteurs des chenilles
 int8_t Speed = 150;
 
 // DÉFINITION DES INTERRUPTIONS
@@ -84,19 +84,19 @@ void move(int direction, int speed)
       
 }
 
-double angle_rad = PI/180.0;
-double angle_deg = 180.0/PI;
-
 void setup(){
     
-    //Set Pwm 8KHz
+    // Configuration des constantes de la cartes Arduino Mega
     TCCR1A = _BV(WGM10);
     TCCR1B = _BV(CS11) | _BV(WGM12);
     TCCR2A = _BV(WGM21) | _BV(WGM20);
     TCCR2B = _BV(CS21);
-    
+
+    // Lancement des interruptions    
     attachInterrupt(Encoder_1.getIntNum(), isr_process_encoder1, RISING);
     attachInterrupt(Encoder_2.getIntNum(), isr_process_encoder2, RISING);
+    
+    // Configuration des moteurs
     Encoder_1.setPulse(9);
     Encoder_1.setRatio(39.267);
     Encoder_1.setPosPid(1.8,0,1.2);
@@ -105,30 +105,27 @@ void setup(){
     Encoder_2.setRatio(39.267);
     Encoder_2.setPosPid(1.8,0,1.2);
     Encoder_2.setSpeedPid(0.18,0,0);
+
+    // Démarrage de la communication en Serial
+    // Baudrate : 9600 
+    //config : 8 bits de données, parité paire, 1 bit de stop
     Serial.begin(9600, SERIAL_8E1);
 }
 
 ///
-/// \fn int getIntFromSerial(char c1, char c2)
-/// \brief Fonction qui permet de calculer la 
-/// valeur reçue en sérial
+/// \brief Fonction qui permet de calculer la valeur reçue en sérial
 /// \param c1 char le premier caractère reçu
 /// \param c2 char le second caractère reçu
-/// \return int : entier correspondant à la 
-/// commande reçue
+/// \return int : entier correspondant à la commande reçue
 ///
 int getIntFromSerial(char c1, char c2){  
   int in1 = c1 - '0';
   int in2 = c2 - '0';
-  Serial.println(in1); 
-  Serial.println(in2);
   if(c1 == '0'){
     return c2 - '0';
-   // Serial.println(c1);
   }
   else{
     int i2 = c2 - '0';
-   // Serial.println(i2);  
     switch(i2){
       case 0 :
       return 10;
@@ -139,15 +136,21 @@ int getIntFromSerial(char c1, char c2){
       break;
 
       case 2 :
-      return 12;
+      return ALL_STOP;
       break;
 
       default:
-      return 12;
+      return ALL_STOP;
       break;
     }
   }
 }
+
+// Programme :
+// 1) lit les données
+// 2) convertit les caractères reçus
+// 3) effectue l'action demandée en fonction de la valeur reçue
+
 void loop(){
      _loop(); 
      char recievedData[2];
@@ -161,31 +164,24 @@ void loop(){
 
 ///
 /// \fn int controlRobot(int cmd)
-/// \brief contrôle le robot selon 
-/// la commande reçue
-/// \param cmd int : entier correspondant 
-/// à la commande reçue
+/// \brief contrôle le robot selon la commande reçue
+/// \param cmd int : entier correspondant à la commande reçue
 ///
 void controlRobot(int cmd){
   switch(cmd){                
         case TRACKS_FORWARD:
-         // Serial.print("AVANCER ");
           move(FORWARD, Speed);
         break;
         case TRACKS_BACKWARD:
-         // Serial.print("RECULER ");
           move(BACKWARD, Speed);
         break;
         case TRACK_TURN_LEFT:
-         // Serial.print("TOURNER A GAUCHE ");
           move(TURN_LEFT, Speed);
         break;
         case TRACK_TURN_RIGHT:
-        //  Serial.print("TOURNER A DROITE ");
           move(TURN_RIGHT, Speed);
         break;
         case TRACKS_STOP:
-        //  Serial.print("TRACKS STOP ");
           move(FORWARD, 0);
         break;
         case ARM_UP:
@@ -201,18 +197,15 @@ void controlRobot(int cmd){
           motor_1.run(0);
         break; 
         case GRIPPER_OPEN:
-        //  Serial.print("GRIPPER OPEN ");
           motor_2.run(-110);
         break;       
          case GRIPPER_CLOSE:
-        //  Serial.print("GRIPPER CLOSE ");
           motor_2.run(110);
         break; 
         case GRIPPER_STOP:
           motor_2.run(0);
         break;  
         case ALL_STOP:
-        //  Serial.print("STOP ALL ");
           motor_2.run(0);
           motor_1.run(0);
           move(FORWARD, 0);
