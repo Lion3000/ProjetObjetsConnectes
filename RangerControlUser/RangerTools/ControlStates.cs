@@ -4,6 +4,9 @@
  */
 namespace RangerTools
 {
+    /// <summary>
+    /// Cette emun definit les actions du robot
+    /// </summary>
     public enum ControlStates
     {
         TRACKS_FORWARD,

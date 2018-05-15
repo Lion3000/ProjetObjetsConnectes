@@ -10,6 +10,9 @@ using System.Net;
 
 namespace RangerTools
 {
+    /// <summary>
+    /// Cette classe contrôle le rendu de la caméra
+    /// </summary>
     class CameraBoundary
     {
         private bool isOn = false;
@@ -17,6 +20,11 @@ namespace RangerTools
         private MainWindow mainWindow;
         private WebRequest request;
 
+        /// <summary>
+        /// Le constructeur initialise la gestion de la caméra
+        /// </summary>
+        /// <param name="mainWindow">Objet qui gére la vue de l'aplication</param>
+        /// <param name="ip">Ce paramètre definit l'adrresse IP de la caméra</param>
         public CameraBoundary(MainWindow mainWindow, string ip = "192.168.43.1")
         {
             this.ip = ip;
@@ -24,23 +32,27 @@ namespace RangerTools
             this.request = WebRequest.Create("http://" + this.ip + ":8080");
         }
 
+        /// <summary>
+        /// Le deconstructeur de la classe
+        /// </summary>
         ~CameraBoundary()
         {
             isOn = false;
         }
 
+        /// <summary>
+        /// Cette methode démarre l'affichage de la caméra
+        /// </summary>
         public void start()
         {
             this.testConnection();
-            this.checkConnection();
-        }
-
-        private void checkConnection()
-        {
             if (this.isOn)
                 this.mainWindow.showVideo(this.ip);
         }
 
+        /// <summary>
+        /// Cette methode teste l'activité de la caméra en http
+        /// </summary>
         private void testConnection()
         {
             try
