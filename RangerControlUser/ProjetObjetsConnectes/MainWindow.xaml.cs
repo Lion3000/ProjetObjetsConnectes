@@ -37,21 +37,29 @@ namespace RangerControlUser
             controller.EventContext = SynchronizationContext.Current;
             controller.FrameReady += newFrameHandler;
 
+            /// <summary>
+            /// In this method the values from the LEAP Library are sent
+            /// over the intermediary LeapBoundary class
+            /// </summary>
             void newFrameHandler(object sender, FrameEventArgs eventArgs) {
                 Frame frame = eventArgs.frame;
 
                 Hand rightHand = null, leftHand = null;
+                // Loop through all present hands on the frame
                 for (int i = 0; i < frame.Hands.Count && (leftHand == null || rightHand == null); i++) {
+                    // Detect if a left hand is present
                     if (frame.Hands[i].IsLeft) {
                         if (leftHand == null)
                             leftHand = frame.Hands[i];
                     }
+                    // Detect if a right hand is present
                     else {
                         if (rightHand == null)
                             rightHand = frame.Hands[i];
                     }
                 }
 
+                // If a left hand is present, send its attributes to LeapBoundary
                 if (leftHand != null) {
                     leapBoundary.LeftActive = true;
                     leapBoundary.setHandAttributes(LeapBoundary.HandId.LEFT, leftHand.Rotation.w, leftHand.GrabStrength);
@@ -60,7 +68,8 @@ namespace RangerControlUser
                     leapBoundary.LeftActive = false;
                 }
 
-                if (rightHand != null) {
+                // If a right hand is present, send its attributes to LeapBoundary
+                if(rightHand != null) {
                     leapBoundary.RightActive = true;
                     leapBoundary.setHandAttributes(LeapBoundary.HandId.RIGHT, rightHand.Rotation.w, rightHand.GrabStrength);
                 }
@@ -68,8 +77,9 @@ namespace RangerControlUser
                     leapBoundary.RightActive = false;
                 }
 
-                this.mode.Text = Enum.GetName(typeof(ControlStates), leapBoundary.toControlState());
+                // Display current state / action sent to the robot
                 state = leapBoundary.toControlState();
+                this.mode.Text = Enum.GetName(typeof(ControlStates), state);
             }
         }
 
@@ -93,10 +103,15 @@ namespace RangerControlUser
             }
         }
 
+        /// <summary>
+        /// Gets the final converted action from LeapBoundary class
+        /// and sends it over to the robot controller
+        /// </summary>
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
             while (true)
             {
+                // Do not re-send an action that is already being executed
                 if (lastState != state) {
                     this.rangerControlRobot.setCommand(ControlStates.ALL_STOP);
                     this.rangerControlRobot.setCommand(state);
@@ -111,6 +126,11 @@ namespace RangerControlUser
             //update ui once worker complete his work
         }
 
+        /// <summary>
+        /// Populate the browser container with an iframe
+        /// showing the received video from the camera
+        /// </summary>
+        /// <param name="ip">The IP of the camera</param>
         public void showVideo(string ip)
         {
             Dispatcher.Invoke((Action)delegate
@@ -121,6 +141,10 @@ namespace RangerControlUser
             });
         }
 
+        /// <summary>
+        /// Delete the iframe and stop
+        /// displaying the camera
+        /// </summary>
         public void hideVideo()
         {
             Dispatcher.Invoke((Action)delegate
